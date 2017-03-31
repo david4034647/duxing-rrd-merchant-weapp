@@ -1,0 +1,35 @@
+
+<!--pages/login/login.wxml-->
+<template name="dividerLine">
+  <view class="divider-line"></view>
+</template>
+
+<view class="page">
+  <view class="account-view">
+    <template is="dividerLine" />
+    <view class="account-input">
+      <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-account.png" mode="scaleToFill"></image>
+      <input class="account-text" placeholder-class="account-placeholder" value="{{account}}" placeholder="请输入账户" focus maxlength="20" confirm-type="next" />
+    </view>
+  </view>
+
+<view class="divider-view">
+    <view class="left-margin"></view>
+    <template is="dividerLine" />
+</view>
+
+  <view class="password-view">
+    <view class="account-input">
+        <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-password.png" mode="scaleToFill"></image>
+        <input class="account-text" placeholder-class="account-placeholder"  value="{{password}}" placeholder="请输入密码" password="true" focus maxlength="20" confirm-type="done" />
+    </view>
+
+    <template is="dividerLine" />
+  </view>
+
+  
+  <view class="btn-container">
+    <view class="main-btn"  hover-class="main-btn-hover" bindtap="doLogin" >登录</view>
+  </view>
+  
+</view>

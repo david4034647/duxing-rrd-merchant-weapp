@@ -1,0 +1,64 @@
+.page {
+    background-color: #f8f8f8;
+    height: 1334rpx;
+    width: 100%;
+}
+
+.divider-line {
+    height: .5rpx;
+    width: 100%;
+    background-color: #e5e5e5;
+}
+
+.account-view {
+    padding-top: 40rpx;
+    height: 80rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+.account-input {
+    display: flex;
+    height: 100%;
+    background-color: white;
+    align-items: center;
+}
+
+.account-text {
+    padding-left:40rpx; 
+    height:100%; 
+    width:100%;
+    color: #333333;
+    font-size: 30rpx;
+}
+
+.account-placeholder {
+    color: #c7c7cd;
+}
+
+.password-view {
+    display: flex;
+    flex-direction: column;
+    height: 80rpx;
+    background-color: white;
+}
+
+.login-btn {
+    margin-top: 100rpx;
+}
+
+.divider-view {
+    display: flex;
+    flex-direction: row;
+}
+
+.left-margin {
+    width: 110rpx;
+    background-color: white;
+}
+
+.btn-container {
+    margin-top: 100rpx;
+    padding: 20rpx;
+}

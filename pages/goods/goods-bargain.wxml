@@ -1,0 +1,30 @@
+<view class="bargain-view" style="height:100%;" >
+    <view class="bargain-item" hover-class="bargain-item-hover" hover style="width:{{pageWidth}}px;" wx:for="{{goodsList}}" wx:key="{{item}}" bindtap="onListViewItemClicked" > 
+            <image class="bargain-item-pic"  src="https://ms.wrcdn.com/{{item._source.goods_img}}"></image>
+
+            <view class="bargain-item-content">
+                <view class="bargain-item-content-des">{{item._source.goods_name}}</view>
+
+                <view class="bargain-item-content-price">
+                    <view class="bargain-item-content-price-bargained">团购价 ¥  <view class="bargain-item-content-price-bargained-integer">99</view>.00</view>
+                    <view class="bargain-item-content-price-ori">原价{{item._source.bargainOriPrice}}</view>
+                </view>
+
+                <view class="bargain-item-content-percent">
+                    <view class="bargain-item-content-progress">
+                        <progress class="bargain-item-content-percent-progress"  stroke-width="18" percent="60" color="#f14557" active />
+                        <view class="bargain-item-content-percent-progress-value">60%</view>
+                    </view>
+
+                    <view class="bargain-item-content-percent-surplus" >(剩余:1999)</view>
+                </view>
+                
+                <view class="bargain-item-content-opt">
+                    <image class="bargain-item-content-opt-icon" src="../../assets/pages/goods/icon_kanjia.png"></image>
+                    <text class="bargain-item-content-opt-count">64</text><text class="bargain-item-content-opt-label">人在砍价</text>
+                    <view class="bargain-item-content-opt-btn" size="mini" type="warn">去砍价 ></view>
+                </view>
+
+            </view>
+    </view>
+</view>

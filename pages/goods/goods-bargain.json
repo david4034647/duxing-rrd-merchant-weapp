@@ -1,0 +1,7 @@
+{
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "lightGray",
+    "navigationBarTitleText": "人人兜兜-砍价",
+    "enablePullDownRefresh": true
+}

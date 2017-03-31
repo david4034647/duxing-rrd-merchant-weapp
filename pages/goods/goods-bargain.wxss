@@ -1,0 +1,178 @@
+/* pages/goods/goods-bargain.wxss */
+
+.bargain-view {
+    width: 100%;
+    background-color: lightgray;
+    overflow-x: hidden;
+}
+
+.bargain-item {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    padding: 10rpx;
+    margin-top: 10rpx;
+}
+
+.bargain-item-hover {
+    background-color: gray;
+}
+
+.bargain-item-pic {
+    display: inline-flex;
+    flex: none;
+    height: 288rpx;
+    width: 288rpx;
+    min-width: 288rpx;
+    background-size: cover;
+}
+
+.bargain-item-content {
+    display: block;
+    flex: auto;
+    flex-direction: column;
+    align-items: center;
+    height: 288rpx;
+    /*background-color: yellow;*/
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+}
+
+.bargain-item-content-des {
+    flex: auto;
+    align-self: flex-start;
+    font-size: 28rpx;
+	color: #333333;
+	height: 60rpx;
+	max-height: 60rpx;
+	line-height: 31rpx;
+	overflow: hidden;
+	text-align: left;
+    margin-top: 8rpx;
+}
+
+.bargain-item-content-price {
+    display: inline-flex;
+    flex: auto;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: space-between;
+    margin-top: 10rpx;
+    width: 100%;
+    height: 35rpx;
+    /*background-color: blanchedalmond;*/
+}
+
+.bargain-item-content-price-bargained {
+    display: flex;
+    flex: none;
+    align-items: flex-end;
+    font-size: 24rpx;
+	color: #f14557;
+}
+
+.bargain-item-content-price-bargained-integer {
+    display: flex;
+    flex: none;
+    font-size: 35rpx;
+	color: #f14557;
+}
+
+.bargain-item-content-price-ori {
+    display: flex;
+    flex: auto;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding-right: 10rpx;
+    padding-left: 10rpx;
+    font-size: 20rpx;
+    color: #666666;
+}
+
+.bargain-item-content-percent {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 36rpx;
+    margin-top: 30rpx;
+    /*background-color: blue;*/
+}
+
+.bargain-item-content-progress {
+    display: inline-block;
+    flex: auto;
+    height: 36rpx;
+}
+
+.bargain-item-content-percent-progress {
+    height: 36rpx;
+    
+}
+
+.bargain-item-content-percent-progress-value {
+    width: 100%;
+    font-size: 20rpx;
+    height: 36rpx;
+    line-height: 36rpx;
+    color: white;
+    text-align: center;
+    position: relative;
+    top: -29rpx;
+}
+
+.bargain-item-content-percent-surplus {
+    display: flex;
+    flex: none;
+    font-size: 20rpx;
+    color: #808080;
+    margin-left: 30rpx;
+    padding-right: 20rpx;
+}
+
+.bargain-item-content-opt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 56rpx;
+    margin-top: 30rpx;
+    /*background-color: goldenrod;*/
+}
+
+.bargain-item-content-opt-icon {
+    flex: none;
+    max-width: 35rpx;
+    max-height: 30rpx;
+}
+
+.bargain-item-content-opt-count {
+    margin-left: 8rpx;
+    font-size: 24rpx;
+    color: #f35868;
+}
+
+.bargain-item-content-opt-label {
+    flex: auto;
+    font-size: 24rpx;
+    color: #9f9f9f;
+}
+
+.bargain-item-content-opt-btn {
+    display: block;
+    
+    text-align: center;
+    margin-right: 20rpx;
+    width: 45%;
+    height: 66rpx;
+    line-height: 66rpx;
+    color: white;
+    font-size: 32rpx;
+    background-color: red;
+    border-radius: 16rpx;
+}
