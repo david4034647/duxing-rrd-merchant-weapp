@@ -1,5 +1,7 @@
 // pages/login/login.js
 var common = require('../../utils/common.js')
+var constant = require('../../utils/constant.js')
+var aes = require('../../utils/aes.js')
 
 Page({
   data:{
@@ -27,7 +29,54 @@ Page({
   doLogin:function(event) {
     console.log("doLogin start ...");
     console.log("account:" + this.data.account + " password:" + this.data.password);
+    console.log("URL : " + constant.LOGIN_URL)
 
+    var param = {"username":this.data.account, "password":this.data.password, "device_id":"4FCC4650-D02F-4143-A544-B79322C05122", "device_type":2}
+    var data = common.desEncrypt(param)
+    console.log("data:" + data)
+
+    //data = common.encryt(param)
+    //console.log("data2:" + data)
+
+    param.data = data
+
+    wx.showToast({
+      title:"加载中...",
+      icon:"loading"
+    })
+
+    wx.request({
+      url: constant.LOGIN_URL,
+      data: param,
+      method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        // success
+        console.log("success:" + res);
+
+      },
+      fail: function(res) {
+        // fail
+        console.log("fail:" + res);
+      },
+      complete: function(res) {
+        // complete
+        console.log("complete:" + res);
+      }
+    })
+
+  },
+
+  bindAccountInput:function(event) {
+    this.setData({
+      account:event.detail.value
+    })
+  },
+
+  bindPasswordInput:function(event) {
+    this.setData({
+      password:event.detail.value
+    })
   }
 
 
