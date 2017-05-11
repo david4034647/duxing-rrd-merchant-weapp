@@ -35,7 +35,7 @@ Page({
     var data = common.desEncrypt(param)
     console.log("data:" + data)
 
-    //data = common.encryt(param)
+   // data = common.encryt(param)
     //console.log("data2:" + data)
 
     param.data = data
