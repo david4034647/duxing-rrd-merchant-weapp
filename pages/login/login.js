@@ -32,13 +32,14 @@ Page({
     console.log("URL : " + constant.LOGIN_URL)
 
     var param = {"username":this.data.account, "password":this.data.password, "device_id":"4FCC4650-D02F-4143-A544-B79322C05122", "device_type":2}
-    var data = common.desEncrypt(param)
-    console.log("data:" + data)
+    var dataStr = common.Encrypt(param)
+    console.log("data:" + dataStr)
 
    // data = common.encryt(param)
     //console.log("data2:" + data)
 
-    param.data = data
+    param = { "data": dataStr}
+    console.log(param)
 
     wx.showToast({
       title:"加载中...",
@@ -52,7 +53,7 @@ Page({
       // header: {}, // 设置请求的 header
       success: function(res){
         // success
-        console.log("success:" + res);
+        console.log("success:" + res.data);
 
       },
       fail: function(res) {
@@ -61,7 +62,7 @@ Page({
       },
       complete: function(res) {
         // complete
-        console.log("complete:" + res);
+        console.log("complete:" + res.data);
       }
     })
 

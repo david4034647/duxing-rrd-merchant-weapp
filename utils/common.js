@@ -1,5 +1,8 @@
 var fun_aes = require('./aes.js')
 var fun_base64 = require('./base64.js')
+var Crypto = require('./cryptojs.js').Crypto
+
+
 /*本工程业务相关的公共函数,非工具类*/
 
 var key = fun_aes.CryptoJS.enc.Utf8.parse('U1MjU1M0FDOUZ.Qz')
@@ -67,6 +70,25 @@ function encryt(word) {
     return obj_base64.encode(str)
 }  
 
+function Encrypt(word) {
+  var mode = new Crypto.mode.CBC(Crypto.pad.pkcs7);
+  var eb = Crypto.charenc.UTF8.stringToBytes(word);
+  var kb = Crypto.charenc.UTF8.stringToBytes("U1MjU1M0FDOUZ.Qz");//KEY
+  var vb = Crypto.charenc.UTF8.stringToBytes("0000000000000000");//IV
+  var ub = Crypto.AES.encrypt(eb, kb, { iv: vb, mode: mode, asBpytes: true });
+  return ub
+  //var obj_base64 = new fun_base64.Base64();
+  //return obj_base64.encode(ub);
+}
+function Decrypt(word) {
+  var mode = new Crypto.mode.CBC(Crypto.pad.pkcs7);
+  var eb = Crypto.util.base64ToBytes(word);
+  var kb = Crypto.charenc.UTF8.stringToBytes("U1MjU1M0FDOUZ.Qz");//KEY
+  var vb = Crypto.charenc.UTF8.stringToBytes("0000000000000000");//IV
+  var ub = Crypto.AES.decrypt(eb, kb, { asBpytes: true, mode: mode, iv: vb });
+  return ub;
+}
+
 module.exports = {
     formatCurrency: formatCurrency,
     integerOfNum: integerOfNum,
@@ -74,5 +96,7 @@ module.exports = {
     showStamp: showStamp,
     desEncrypt: desEncrypt,
     desDecrypt: desDecrypt,
-    encryt: encryt
+    encryt: encryt,
+    Encrypt: Encrypt,
+    Decrypt: Decrypt
 }
