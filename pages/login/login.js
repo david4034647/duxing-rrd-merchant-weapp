@@ -1,7 +1,6 @@
 // pages/login/login.js
 var common = require('../../utils/common.js')
 var constant = require('../../utils/constant.js')
-var aes = require('../../utils/aes.js')
 
 Page({
   data:{
