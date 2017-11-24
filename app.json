@@ -1,14 +1,16 @@
 {
   "pages":[
+    "pages/home/home",
     "pages/login/login",
     "pages/goods/goods-bargain",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"dark",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f8f8f8f",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#f8f8f8f"
   }
 }

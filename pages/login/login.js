@@ -34,9 +34,6 @@ Page({
     var dataStr = common.Encrypt(param)
     console.log("data:" + dataStr)
 
-   // data = common.encryt(param)
-    //console.log("data2:" + data)
-
     param = { "data": dataStr}
     console.log(param)
 
@@ -54,6 +51,16 @@ Page({
         // success
         console.log("success:" + res.data);
 
+        // wx.navigateTo({
+        //   url: '../index/index',
+        //   success: function(res) {},
+        //   fail: function(res) {},
+        //   complete: function(res) {},
+        // })
+
+        wx.redirectTo({
+          url: '../index/index',
+        })
       },
       fail: function(res) {
         // fail
