@@ -1,0 +1,151 @@
+
+.order-root {
+  display: flex;
+  /* flex-direction: column; */
+  /* flex-wrap: nowrap; */
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  background-color: yellow;
+}
+
+.order-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 410rpx;
+  background-color: white;
+  margin-top: 20rpx;
+}
+
+.order-item-hover {
+  background: gray;
+}
+
+.order-item-top {
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.order-num-label {
+  color: #333333;
+  font-size: 30rpx;
+}
+
+.order-num-value {
+  color: #333333;
+  font-size: 30rpx;
+}
+
+.order-status-label {
+  color: #56c372;
+  font-size: 30rpx;
+}
+
+.order-item-product {
+  display: flex;
+  flex-direction: row; 
+  /* flex-flow: wrap; */
+  height: 178rpx;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.order-item-product-icon {
+  flex: none;
+  width: 150rpx;
+  height: 150rpx;
+  align-self: center;
+  background-color: blue;
+  margin-left: 20rpx;
+}
+
+.order-item-product-txt {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+  align-items: flex-start;
+}
+
+.order-item-product-title {
+  flex: none;
+  color: #333333;
+  font-size: 26rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 64rpx;
+  line-height: 32rpx;
+  margin-top: 14rpx;
+
+}
+
+.order-item-product-desc {
+  flex: none;
+  color: #999999;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+  max-height: 60rpx;
+  line-height: 30rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.order-item-product-num {
+  flex: none;
+  display: flex;
+  flex-direction: column;  
+  padding-right: 20rpx;
+  max-width: 115rpx;
+}
+
+.order-item-product-price {
+  flex: none;
+  color: #333333;
+  font-size: 26rpx;
+  max-height: 32rpx;
+  line-height: 32rpx;
+  max-width: 115rpx;
+  text-align: right;
+  margin-top: 14rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.order-item-product-origin-price {
+  flex: none;
+  color: #999999;
+  font-size: 26rpx;
+  text-decoration-line: line-through;
+  max-height: 32rpx;
+  line-height: 32rpx;
+  max-width: 115rpx; 
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.order-item-product-count {
+  flex: none;
+  color: #999999;
+  font-size: 24rpx;
+  max-width: 115rpx; 
+  text-align: right;
+  margin-top: 20rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.order-item-summary {
+  display: flex;
+  flex-direction: row;
+  height: 70rpx;
+  border-bottom: 0.5rpx;
+  border-bottom-color: #eaeaea;
+  border-bottom-style: solid; 
+  margin-left: 20rpx;
+}

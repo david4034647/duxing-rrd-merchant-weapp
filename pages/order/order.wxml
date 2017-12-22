@@ -1,0 +1,36 @@
+<view class='order-root'>
+
+  <view class='order-item' hover-class="order-item-hover" hover bindtap="onListViewItemClicked">
+    <view class='order-item-top'>
+      <text class='order-num-label'></text>
+      <text class='order-num-value'></text>
+      <text class='order-status-label'></text>
+    </view>
+    <view class='order-item-product'>
+      <image class='order-item-product-icon'></image>
+      <view class='order-item-product-txt'>
+        <text class='order-item-product-title'>收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格</text>
+
+        <text class='order-item-product-desc'>描述建立健康的看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格收款后看看价格</text>
+      </view>
+      
+      <view class='order-item-product-num'>
+        <text class='order-item-product-price'>¥ 19999.98</text>
+        <text class='order-item-product-origin-price'>¥ 299.98</text>
+        <text class='order-item-product-count'>x10</text>
+      </view>
+      
+    </view>
+    <view class='order-item-summary'>
+      <text class='order-item-summary-count'></text>
+      <text class='order-item-summary-total-label'></text>
+      <text class='order-item-summary-total-value'></text>
+      <text class='order-item-summary-carriage'></text>
+    </view>
+    <view class='order-item-bottom'>
+      <view class='order-item-bottom-type'></view>
+      <button class='order-item-bottom-opt-btn8'></button>
+    </view>
+  </view>
+
+</view>

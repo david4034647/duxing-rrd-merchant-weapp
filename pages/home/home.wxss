@@ -1,0 +1,229 @@
+/* pages/home/home.wxss */
+.page {
+    background-color: #ff5824;
+    height: 100%;
+    width: 100%;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  background: #f8f8f8;
+}
+
+.top-home {
+  height: 400rpx;
+  background: #ff5824;
+  flex-direction: row;
+  padding-top: 40rpx;
+  text-align: center;
+}
+
+.trade-amount-label {
+  color: white;
+  opacity: 0.5;
+  font-size: 32rpx;  
+  display: block;
+}
+
+.trade-amount-value {
+  color: white;
+  font-size: 76rpx;
+  display: block;
+  /* background: blue; */
+}
+
+.commission {
+  display: inline-block;
+  font-size: 32rpx; 
+  color: white;
+  /* background: blue; */
+}
+
+.top-home-banner {
+  margin-top: 83rpx;
+  flex-direction: column;
+  height: 116rpx;
+  background: #ff4f22;
+  color: white;
+  font-size: 40rpx;  
+  padding-top: 15rpx;
+}
+
+.today-order {
+  display: inline-block;
+  width: 33%;
+}
+
+.today-order-value {
+  display: block;
+}
+
+.today-order-label {
+  display: block;
+  opacity: 0.5;
+  font-size: 32rpx;
+}
+
+.today-guest {
+  display: inline-block;
+  width: 33%;
+}
+
+.today-guest-value {
+  display: block;
+}
+
+.today-guest-label {
+  display: block;
+  opacity: 0.5;
+  font-size: 32rpx;
+}
+
+.yesterday-visitor {
+  display: inline-block;
+  width: 33%;
+}
+
+.yesterday-visitor-value {
+  display: block;
+}
+
+.yesterday-visitor-label {
+  display: block;
+  opacity: 0.5;
+  font-size: 32rpx;
+}
+
+.middle-home {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+  width: 100%;
+  height: 340rpx;
+  max-height: 340rpx;
+  background: white; 
+}
+
+.order-manager {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-content: center;
+  /* background: blue; */
+  height: 90rpx;
+  border-bottom: 1rpx;
+  border-bottom-color: #eaeaea;
+  border-bottom-style: solid; 
+}
+
+.order-manager-icon {
+  display: inline-flex;
+  flex: none;
+  align-self: center;
+  height: 36rpx;
+  width: 36rpx;
+  /* background: yellow; */
+  margin-left: 30rpx;
+}
+
+.order-manager-label {
+  flex: auto;
+  display: inline-flex;
+  align-self: center;
+  font-size: 32rpx;
+  color: #333333;
+  /* background: gray; */
+  margin-left: 15rpx;
+}
+
+.order-status {
+  flex: none;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 250rpx;
+  flex-direction: row;
+   /* background: white;  */
+  align-items: stretch;
+
+  border-bottom: 1rpx;
+  border-bottom-color: #eaeaea;
+  border-bottom-style: solid; 
+}
+
+.order-status-waitingsend {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: yellow; */
+}
+
+.order-status-waitingsend-icon {
+  width: 102rpx;
+  height: 102rpx;
+}
+
+.order-status-waitingsend-label {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #666666;
+}
+
+.order-status-waitingpay {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-right: 1rpx;
+  border-right-color: #eaeaea;
+  border-right-style: solid; 
+
+  border-left: 1rpx;
+  border-left-color: #eaeaea;
+  border-left-style: solid; 
+
+  /* background: yellow; */
+}
+
+.order-status-waitingpay-icon {
+  width: 102rpx;
+  height: 102rpx;
+}
+
+.order-status-waitingpay-label {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #666666;
+}
+
+.order-status-refunding {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.order-status-refunding-icon {
+  width: 102rpx;
+  height: 102rpx;
+}
+
+.order-status-refunding-label {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #666666;
+}
+
+.bottom-home {
+  
+  flex: auto;
+  height: 100rpx;
+  background: red;
+}

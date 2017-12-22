@@ -1,0 +1,56 @@
+<view class='root'>
+  <view class='top-home'>
+    <text class='trade-amount-label'>交易金额（元）</text>
+    <text class='trade-amount-value'>0.00</text>
+
+    <view class='commission'>
+      <text class='commission-label' decode='true'>今日佣金&nbsp;</text>
+      <text class='commission-value'>0.00</text>
+    </view>
+
+    <view class='top-home-banner'>
+      <view class='today-order'>
+        <text class='today-order-value'>0</text>
+        <text class='today-order-label'>今日订单</text>
+      </view>
+
+      <view class='today-guest'>
+        <text class='today-guest-value'>0</text>
+        <text class='today-guest-label'>今日推客</text>
+      </view>
+
+      <view class='yesterday-visitor'>
+        <text class='yesterday-visitor-value'>0</text>
+        <text class='yesterday-visitor-label'>昨日用户</text>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='middle-home'>
+    <view class='order-manager'>
+      <image class='order-manager-icon' mode='aspectFit' src="../../assets/pages/home/order-icon.png"></image>
+      <text class='order-manager-label'>订单管理</text>
+    </view>
+
+    <view class='order-status'>
+      <view class='order-status-waitingsend'>
+        <image class='order-status-waitingsend-icon' mode='aspectFit' src="../../assets/pages/home/waitingsend-btn.png"></image>
+        <text class='order-status-waitingsend-label'>待发货</text>
+      </view>
+
+      <view class='order-status-waitingpay'>
+        <image class='order-status-waitingpay-icon' mode='aspectFit' src="../../assets/pages/home/waitingpay-btn.png"></image>
+        <text class='order-status-waitingpay-label'>待付款</text>
+      </view>
+
+      <view class='order-status-refunding'>
+        <image class='order-status-refunding-icon' mode='aspectFit' src="../../assets/pages/home/refunding-btn.png"></image>
+        <text class='order-status-refunding-label'>退款中</text>
+      </view>
+    </view>
+
+    <view class='bottom-home'></view>
+
+  </view>
+</view>
