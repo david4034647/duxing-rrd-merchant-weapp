@@ -9,6 +9,19 @@ Page({
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
+
+    try {
+      var token = wx.getStorageSync(constant.KEY_TOKEN_INDEX);
+      console.log("token is [" + token + "]");
+      if (token) {
+        this.forward2Home();
+      }
+      
+    } catch(e) {
+      console.log("getStorageSync have a exception " + e);
+    } finally {
+
+    }
   },
   onReady:function(){
     // 页面渲染完成
@@ -42,6 +55,7 @@ Page({
       icon:"loading"
     })
 
+    var that = this;
     wx.request({
       url: constant.LOGIN_URL,
       data: param,
@@ -49,8 +63,23 @@ Page({
       // header: {}, // 设置请求的 header
       success: function(res){
         // success
-        console.log("success:" + res.data);
+        console.log("success:" + res.data.message);
 
+        // wx.setStorages({
+        //   key: constant.KEY_TOKEN_INDEX,
+        //   data: res.data.token,
+        // });
+        if (res.data.code != 0) {
+          wx.showToast({
+            title: res.data.message,
+            icon: "none",
+            duration: 2000
+          });
+          return;
+        }
+
+        wx.setStorageSync(constant.KEY_TOKEN_INDEX, res.data.data.token);
+        console.log("store token:" + res.data.data.token);
         // wx.navigateTo({
         //   url: '../index/index',
         //   success: function(res) {},
@@ -58,9 +87,7 @@ Page({
         //   complete: function(res) {},
         // })
 
-        wx.redirectTo({
-          url: '../index/index',
-        })
+        that.forward2Home();
       },
       fail: function(res) {
         // fail
@@ -84,9 +111,13 @@ Page({
     this.setData({
       password:event.detail.value
     })
-  }
+  },
 
-
+  forward2Home:function() {
+    wx.redirectTo({
+      url: '../home/home',
+    })
+  },
 
 
 })
