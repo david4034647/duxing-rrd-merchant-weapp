@@ -26,21 +26,27 @@
   height: 80rpx;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .order-num-label {
+  flex: none;
   color: #333333;
   font-size: 30rpx;
+  margin-left: 20rpx;
 }
 
 .order-num-value {
+  flex: auto;
   color: #333333;
   font-size: 30rpx;
 }
 
 .order-status-label {
+  flex: none;
   color: #56c372;
   font-size: 30rpx;
+  margin-right: 20rpx;
 }
 
 .order-item-product {
@@ -143,9 +149,74 @@
 .order-item-summary {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   height: 70rpx;
   border-bottom: 0.5rpx;
   border-bottom-color: #eaeaea;
   border-bottom-style: solid; 
   margin-left: 20rpx;
+  color: #333333;
+  font-size: 26rpx;
+  padding-right: 20rpx;
+}
+
+.order-item-summary-total-value {
+  font-size: 32rpx;
+}
+
+.order-item-bottom {
+  flex: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 84rpx;
+  width: 100%;
+  max-height: 84rpx;
+}
+
+.order-item-bottom-type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20rpx;
+  border: solid;
+  border-width: 1rpx;
+  border-radius: 4rpx;
+  border-color: #eaeaea;
+  width: 150rpx;
+  height: 46rpx;
+  padding-left: 14rpx;
+  padding-right: 14rpx;
+}
+
+.order-item-bottom-type-icon {
+  height: 24rpx;
+  width:24rpx;
+  background-color: blue;
+}
+
+.order-item-bottom-type-label {
+  flex: none;
+  color: #666666;
+  font-size: 24rpx;
+  margin-left: 8rpx;
+}
+
+.order-item-bottom-opt-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56rpx;
+  width: 170rpx;
+  border: solid;
+  border-width: 1rpx;
+  border-radius: 56rpx;
+  border-color: #ff6600;
+  font-size: 32rpx;
+  color: white;
+  background-color: #ff6600;
+  margin-right: 20rpx;
 }

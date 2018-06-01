@@ -1,6 +1,6 @@
-.page {
+page {
     background-color: #f8f8f8;
-    height: 1334rpx;
+    height: 100%;
     width: 100%;
 }
 
