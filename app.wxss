@@ -27,3 +27,17 @@ page {
 .main-btn-hover {
   opacity: 0.7;
 }
+
+.error-hint {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+}
+
+.error-hint-icon {
+  margin-top: 40%;
+  width: 200rpx;
+  height: 200rpx;
+}

@@ -34,23 +34,25 @@
     </view>
 
     <view class='order-status'>
-      <view id='1' class='order-status-waitingsend' hover-class="main-btn-hover" bindtap="forward2Order">
+      <view id='tosend' class='order-status-waitingsend' hover-class="main-btn-hover" bindtap="forward2Order">
         <image class='order-status-waitingsend-icon' mode='aspectFit' src="../../assets/pages/home/waitingsend-btn.png"></image>
         <text class='order-status-waitingsend-label'>待发货</text>
       </view>
 
-      <view id='2' class='order-status-waitingpay' hover-class="main-btn-hover" bindtap="forward2Order">
+      <view id='topay' class='order-status-waitingpay' hover-class="main-btn-hover" bindtap="forward2Order">
         <image class='order-status-waitingpay-icon' mode='aspectFit' src="../../assets/pages/home/waitingpay-btn.png"></image>
         <text class='order-status-waitingpay-label'>待付款</text>
       </view>
 
-      <view id='3' class='order-status-refunding' hover-class="main-btn-hover" bindtap="forward2Order">
+      <view id='feedback' class='order-status-refunding' hover-class="main-btn-hover" bindtap="forward2Order">
         <image class='order-status-refunding-icon' mode='aspectFit' src="../../assets/pages/home/refunding-btn.png"></image>
         <text class='order-status-refunding-label'>退款中</text>
       </view>
     </view>
-
-    <view class='bottom-home'></view>
-
   </view>
+
+</view>
+
+<view class="btn-container">
+  <view class="main-btn"  hover-class="main-btn-hover" bindtap="doLogout" >退出登录</view>
 </view>

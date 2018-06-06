@@ -138,11 +138,29 @@ Page({
   },
 
   forward2Order: function (event) {
+    console.log(event);
     wx.navigateTo({
-      url: '../order/order?type=' + event.target.id,
+      url: '../order/order?status=' + event.currentTarget.id,
       success: function(res) {},
       fail: function(res) {},
       complete: function(res) {},
     })
+  },
+
+  doLogout: function (event) {
+
+    wx.showModal({
+      title: '',
+      content: '确定退出登录？',
+      success: function(res) {
+        if (res.confirm) {
+          wx.clearStorage();
+
+          wx.reLaunch({
+            url: '../login/login',
+          })
+        }
+      },
+    });
   },
 })

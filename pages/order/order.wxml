@@ -1,7 +1,9 @@
 
-<view class='order-root'>
-
-  <view class='order-item' hover-class="order-item-hover" hover wx:for="{{orders}}" wx:key="{{item}}" bindtap="onListViewItemClicked">
+<view class='error-hint' hidden='{{orders.length>0}}'>
+    <image class='error-hint-icon' src="../../assets/common/default_list.png"></image>
+</view>
+<view class='order-root' hidden='{{orders.length===0}}'>
+  <view class='order-item' hover-class="main-btn-hover"  hover wx:for="{{orders}}" wx:key="{{item}}" bindtap="onListViewItemClicked">
     <view class='order-item-top'>
       <text class='order-num-label'>订单编号:</text>
       <text class='order-num-value'>{{item.order_sn}}</text>
@@ -28,13 +30,15 @@
       <text class='order-item-summary-total-value'>{{item.amount}}</text>
       <text class='order-item-summary-carriage'> (含运费:¥{{item.shipment_fee}})</text>
     </view>
-    <view class='order-item-bottom'>
-      <view class='order-item-bottom-type'>
-        <image class='order-item-bottom-type-icon'></image>
-        <text class='order-item-bottom-type-label'>物流配送</text>
+
+    <view class='order-item-bottom' wx:if="{{item.tosend_btn===1}}">
+      <view class='order-item-bottom-type' hidden='true'>
+        <image class='order-item-bottom-type-icon' hidden='true'></image>
+        <text class='order-item-bottom-type-label' hidden='true'>物流配送</text>
       </view>
-      <view class='order-item-bottom-opt-btn'>发货</view>
+      <view class='order-item-bottom-opt-btn'>发    货</view>
     </view>
-  </view>
+    
+  </view> 
 
 </view>

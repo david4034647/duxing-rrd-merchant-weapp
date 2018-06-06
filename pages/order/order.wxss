@@ -1,24 +1,20 @@
 
 .order-root {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   /* flex-wrap: nowrap; */
   min-height: 100%;
   width: 100%;
-  background-color: yellow;
+  background-color: #f8f8f8;
 }
 
 .order-item {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 410rpx;
+  max-height: 410rpx;
   background-color: white;
   margin-top: 20rpx;
-}
-
-.order-item-hover {
-  background: gray;
 }
 
 .order-item-top {
@@ -62,7 +58,7 @@
   width: 150rpx;
   height: 150rpx;
   align-self: center;
-  background-color: blue;
+  background-color: white;
   margin-left: 20rpx;
 }
 
@@ -152,10 +148,6 @@
   justify-content: flex-end;
   align-items: center;
   height: 70rpx;
-  border-bottom: 0.5rpx;
-  border-bottom-color: #eaeaea;
-  border-bottom-style: solid; 
-  margin-left: 20rpx;
   color: #333333;
   font-size: 26rpx;
   padding-right: 20rpx;
@@ -163,6 +155,7 @@
 
 .order-item-summary-total-value {
   font-size: 32rpx;
+  color: #56c372;
 }
 
 .order-item-bottom {
@@ -170,10 +163,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 84rpx;
   width: 100%;
   max-height: 84rpx;
+
+  border-top: 0.5rpx;
+  border-top-color: #eaeaea;
+  border-top-style: solid; 
+  margin-left: 20rpx;
 }
 
 .order-item-bottom-type {
@@ -218,5 +216,5 @@
   font-size: 32rpx;
   color: white;
   background-color: #ff6600;
-  margin-right: 20rpx;
+  margin-right: 40rpx;
 }

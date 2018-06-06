@@ -227,3 +227,11 @@
   height: 100rpx;
   background: red;
 }
+
+.btn-container {
+    display: flex;
+    flex: auto;
+    padding: 20rpx;
+    margin-top: 20rpx;
+    background-color: white;
+}

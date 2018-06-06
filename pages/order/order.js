@@ -20,8 +20,27 @@ Page({
   onLoad: function (options) {
     console.log(options);
 
+    switch (options.status) {
+      case "tosend":
+        wx.setNavigationBarTitle({
+          title: '待发货订单',
+        });
+        break;
+      case "topay":
+        wx.setNavigationBarTitle({
+          title: '待收款订单',
+        });
+        break;
+      case "feedback":
+        wx.setNavigationBarTitle({
+          title: '待退款订单',
+        });
+        break;
+      default:      
+    };
+
     this.setData({
-      status: options.type,
+      status: options.status,
     });
 
     this.refreshData();
@@ -95,7 +114,7 @@ Page({
     var token = wx.getStorageSync(constant.KEY_TOKEN_INDEX);
 
     var params = {
-      state: "tosend",
+      state: this.data.status,
       offset: offset,
       token: token
     };
@@ -157,6 +176,14 @@ Page({
 
         wx.stopPullDownRefresh();
       }
+    });
+  },
+
+  onListViewItemClicked: function (event) {
+    wx.showModal({
+      title: "",
+      content: "更多功能请下载APP获得.",
+      showCancel: false
     });
   },
 })
