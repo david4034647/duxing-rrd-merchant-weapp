@@ -5,7 +5,8 @@ var constant = require('../../utils/constant.js')
 Page({
   data:{
     account: "",
-    password: ""
+    password: "",
+    focus:false
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -110,6 +111,12 @@ Page({
   bindPasswordInput:function(event) {
     this.setData({
       password:event.detail.value
+    })
+  },
+
+  bindAccountDoNext:function(event) {
+    this.setData({
+      focus:true
     })
   },
 

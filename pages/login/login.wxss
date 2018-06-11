@@ -13,6 +13,7 @@ page {
 .account-view {
     padding-top: 40rpx;
     height: 80rpx;
+    min-height: 80rpx;
     display: flex;
     flex-direction: column;
     background-color: #f8f8f8;
@@ -20,14 +21,14 @@ page {
 
 .account-input {
     display: flex;
-    height: 100%;
+    height: 80rpx;
     background-color: white;
     align-items: center;
 }
 
 .account-text {
     padding-left:40rpx; 
-    height:100%; 
+    height:80rpx; 
     width:100%;
     color: #333333;
     font-size: 30rpx;
@@ -35,6 +36,9 @@ page {
 
 .account-placeholder {
     color: #c7c7cd;
+    height:80rpx;
+    width: 100%;
+    font-size: 30rpx;
 }
 
 .password-view {
