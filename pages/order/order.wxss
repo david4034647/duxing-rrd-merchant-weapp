@@ -2,10 +2,11 @@
 .order-root {
   display: inline-flex;
   flex-direction: column;
-  /* flex-wrap: nowrap; */
+  flex-wrap: nowrap;
   min-height: 100%;
   width: 100%;
   background-color: #f8f8f8;
+  overflow-x: hidden;
 }
 
 .order-item {

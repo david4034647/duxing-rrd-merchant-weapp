@@ -13,7 +13,8 @@ Page({
     maskrAnimation: {},
     maskcAnimation: {},
     btnCSS:"8rpx",
-    maskHidden: true
+    maskHidden: true,
+    focus:false
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -168,6 +169,12 @@ Page({
   bindPasswordInput:function(event) {
     this.setData({
       password:event.detail.value
+    })
+  },
+
+  bindAccountDoNext:function(event) {
+    this.setData({
+      focus:true
     })
   },
 
