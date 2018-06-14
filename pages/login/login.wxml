@@ -9,7 +9,7 @@
     <template is="dividerLine" />
     <view class="account-input">
       <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-account.png" mode="scaleToFill"></image>
-      <input class="account-text"   placeholder-class="account-placeholder" value="{{account}}" placeholder="请输入账户" focus maxlength="20" confirm-type="next" bindinput="bindAccountInput"  />
+      <input class="account-text"  animation="{{shakeAnimAccount}}"  placeholder-class="account-placeholder" value="{{account}}" placeholder="请输入账户" focus maxlength="20" confirm-type="next" bindinput="bindAccountInput"  />
     </view>
   </view>
 
@@ -21,7 +21,7 @@
   <view class="password-view">
     <view class="account-input">
         <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-password.png" mode="scaleToFill"></image>
-        <input class="account-text" placeholder-class="account-placeholder"  value="{{password}}" placeholder="请输入密码" password="true" focus maxlength="20" confirm-type="done" bindinput="bindPasswordInput"/>
+        <input class="account-text"  animation="{{shakeAnimPassword}}" placeholder-class="account-placeholder"  value="{{password}}" placeholder="请输入密码" password="true" focus maxlength="20" confirm-type="done" bindinput="bindPasswordInput"/>
     </view>
 
     <template is="dividerLine" />
@@ -29,7 +29,12 @@
 
   
   <view class="btn-container">
-    <view class="main-btn"  hover-class="main-btn-hover" bindtap="doLogin" >登录</view>
+    
+    <view id='login-btn' class="main-btn" style="border-radius:{{btnCSS}};" animation="{{loginAnimation}}"  hover-class="main-btn-hover" bindtap="doLogin" >登录</view>
+    <view id='maskl' hidden class="btn-anim-maskl" animation="{{masklAnimation}}"  />
+    <view id='maskr' hidden class="btn-anim-maskr" animation="{{maskrAnimation}}" />
+    <view id='maskc' hidden="{{maskHidden}}" class="btn-anim-maskc" animation="{{maskcAnimation}}">+</view>
+    
   </view>
   
 </view>

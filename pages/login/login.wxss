@@ -59,6 +59,41 @@ page {
 }
 
 .btn-container {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 100rpx;
     padding: 20rpx;
+}
+
+.btn-anim-maskr {
+    margin-top: -90rpx;
+    float: right;
+    background-color: black;
+    width: 90rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 90rpx;
+}
+
+.btn-anim-maskl {
+    margin-top: -90rpx;
+    background-color: black;
+    width: 90rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 90rpx;
+}
+
+.btn-anim-maskc {
+  text-align: center;
+  color: white;
+  margin-top: -90rpx;
+    font-size: 32rpx;
+    background-color: #ff6600;
+    width: 90rpx;
+    height: 90rpx;
+    line-height: 90rpx;
+    border-radius: 90rpx;
 }
