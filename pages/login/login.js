@@ -9,6 +9,7 @@ Page({
     shakeAnimAccount: {},
     shakeAnimPassword: {},
     loginAnimation: {},
+    loginSuccessAnimation: {},
     masklAnimation: {},
     maskrAnimation: {},
     maskcAnimation: {},
@@ -136,7 +137,22 @@ Page({
         //   complete: function(res) {},
         // })
 
-        that.forward2Home();
+        wx.setNavigationBarColor({
+          frontColor: '#ffffff',
+          backgroundColor: '#ff5824'
+        })
+
+        var startLoginSuccessAnimation = that.startLoginSuccessAnimation()
+        that.setData({
+          maskHidden: false,
+          btnCSS: "8rpx",
+          loginSuccessAnimation: startLoginSuccessAnimation.export()
+        })
+
+        setTimeout(function () {
+          that.forward2Home();
+        }.bind(that), 800)
+        
       },
       fail: function(res) {
         // fail
@@ -147,13 +163,13 @@ Page({
         console.log("complete:" + res.data);
 
         var stopLoginAnimation = that.stopLoginAnimation()
-        setTimeout(function() {
+        setTimeout(function () {
           that.setData({
             maskHidden: true,
             btnCSS: "8rpx",
             loginAnimation: stopLoginAnimation.export()
           })
-        }.bind(that), 800)
+        }.bind(that), 1000)
         
       }
     })
@@ -204,8 +220,8 @@ Page({
   startLoginAnimation:function() {
     var startLoginAnimation = wx.createAnimation({
       duration: 150,
-      timingFunction: 'ease-out',
-      delay: 0
+      timingFunction: 'ease-in',
+      delay: 50
     })
 
     startLoginAnimation.scale(0, 1).step()
@@ -220,6 +236,12 @@ Page({
     })
 
     stopLoginAnimation.scale(1, 1).step()
+    for (var i=0; i<3; i++) {
+      stopLoginAnimation.translate(5).step({duration: 100})
+      stopLoginAnimation.translate(-5).step({ duration: 100 })
+    }
+    stopLoginAnimation.translate(0).step()
+    
     return stopLoginAnimation
   },
 
@@ -255,6 +277,18 @@ Page({
 
     })
 
+    return anim
+  },
+
+  startLoginSuccessAnimation:function() {
+    var anim = wx.createAnimation({
+      duration: 800,
+      timingFunction: 'ease-out',
+      delay: 0,
+      transformOrigin: '50% 50% 100'
+    })
+
+    anim.scale(20,20).step()
     return anim
   },
 

@@ -34,10 +34,12 @@
   
   <view class="btn-container">
     
-    <view id='login-btn' class="main-btn" style="border-radius:{{btnCSS}};" animation="{{loginAnimation}}"  hover-class="main-btn-hover" bindtap="doLogin" >登录</view>
+    <view id='login-btn' class="main-btn" style="border-radius:{{btnCSS}};" animation="{{loginAnimation}}"   bindtap="doLogin" >登录</view>
     <view id='maskl' hidden class="btn-anim-maskl" animation="{{masklAnimation}}"  />
     <view id='maskr' hidden class="btn-anim-maskr" animation="{{maskrAnimation}}" />
-    <view id='maskc' hidden="{{maskHidden}}" class="btn-anim-maskc" animation="{{maskcAnimation}}">+</view>
+    <view id='maskc' hidden="{{maskHidden}}" class="btn-anim-maskc" animation="{{loginSuccessAnimation}}">
+      <view>+</view>
+    </view>
     
   </view>
   
