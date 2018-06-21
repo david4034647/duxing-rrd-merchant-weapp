@@ -27,7 +27,7 @@ page {
 }
 
 .account-text {
-    padding-left:40rpx; 
+    padding-left:35rpx; 
     height:80rpx; 
     width:100%;
     color: #333333;
@@ -91,7 +91,9 @@ page {
 }
 
 .btn-anim-maskc {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
   margin-top: -90rpx;
     font-size: 32rpx;
@@ -100,4 +102,10 @@ page {
     height: 90rpx;
     line-height: 90rpx;
     border-radius: 90rpx;
+}
+
+.loading-img {
+  width: 45rpx; 
+  height: 45rpx;
+
 }

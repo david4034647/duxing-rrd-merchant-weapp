@@ -15,7 +15,8 @@ Page({
     maskcAnimation: {},
     btnCSS:"8rpx",
     maskHidden: true,
-    focus:false
+    focus:false,
+    display: 'block'
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
@@ -122,7 +123,7 @@ Page({
         if (res.data.code != 0) {
           wx.showToast({
             title: res.data.message,
-            icon: "fail",
+            image: '../../assets/common/icon_error.png',
             duration: 2000
           });
           return;
@@ -130,12 +131,6 @@ Page({
 
         wx.setStorageSync(constant.KEY_TOKEN_INDEX, res.data.data.token);
         console.log("store token:" + res.data.data.token);
-        // wx.navigateTo({
-        //   url: '../index/index',
-        //   success: function(res) {},
-        //   fail: function(res) {},
-        //   complete: function(res) {},
-        // })
 
         wx.setNavigationBarColor({
           frontColor: '#ffffff',
@@ -144,6 +139,7 @@ Page({
 
         var startLoginSuccessAnimation = that.startLoginSuccessAnimation()
         that.setData({
+          display: 'none',
           maskHidden: false,
           btnCSS: "8rpx",
           loginSuccessAnimation: startLoginSuccessAnimation.export()

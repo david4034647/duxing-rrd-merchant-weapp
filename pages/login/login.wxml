@@ -8,9 +8,9 @@
   <view class="account-view">
     <template is="dividerLine" />
     <view class="account-input">
-      <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-account.png" mode="scaleToFill"></image>
+      <image style="width: 50rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-account.png" mode="scaleToFill"></image>
 
-      <input class="account-text" animation="{{shakeAnimAccount}}" placeholder-class="account-placeholder" value="{{account}}" placeholder="请输入账户" focus maxlength="20" confirm-type="next" confirm-hold="true" bindinput="bindAccountInput" bindconfirm="bindAccountDoNext" />
+      <input hidden="{{display==='none'}}" class="account-text" animation="{{shakeAnimAccount}}" placeholder-class="account-placeholder" value="{{account}}" placeholder="请输入账户" focus maxlength="20" confirm-type="next" confirm-hold="true" bindinput="bindAccountInput" bindconfirm="bindAccountDoNext" />
 
     </view>
   </view>
@@ -22,9 +22,8 @@
 
   <view class="password-view">
     <view class="account-input">
-        <image style="width: 40rpx; height: 40rpx; margin-left: 20rpx;" src="../../assets/pages/login/icon-password.png" mode="scaleToFill"></image>
-
-        <input class="account-text" animation="{{shakeAnimPassword}}" placeholder-class="account-placeholder"  value="{{password}}" placeholder="请输入密码" password="true" focus="{{focus}}" maxlength="20" confirm-type="done" bindinput="bindPasswordInput" bindconfirm='doLogin'/>
+        <image style="width: 50rpx; height: 40rpx; margin-left: 20rpx; " src="../../assets/pages/login/icon-password.png" mode="scaleToFill"></image>
+        <input hidden="{{display==='none'}}" class="account-text" animation="{{shakeAnimPassword}}" placeholder-class="account-placeholder"  value="{{password}}" placeholder="请输入密码" password="true" focus="{{focus}}" maxlength="20" confirm-type="done" bindinput="bindPasswordInput" bindconfirm='doLogin'/>
 
     </view>
 
@@ -38,8 +37,9 @@
     <view id='maskl' hidden class="btn-anim-maskl" animation="{{masklAnimation}}"  />
     <view id='maskr' hidden class="btn-anim-maskr" animation="{{maskrAnimation}}" />
     <view id='maskc' hidden="{{maskHidden}}" class="btn-anim-maskc" animation="{{loginSuccessAnimation}}">
-      <view>+</view>
+      <image  class="loading-img" style='display: {{display}};' mode='aspectFit' src='../../assets/common/spinner.gif'></image>
     </view>
+
     
   </view>
   
